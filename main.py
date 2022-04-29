@@ -12,7 +12,7 @@ def print_result():
     artical_date = artical.find(class_='tm-article-snippet__datetime-published')
     artical_date = artical_date.time.get('title')
     artical_date = datetime.date(datetime.strptime(artical_date, '%Y-%m-%d, %H:%M')).strftime('%d.%m.%Y')
-    print(f"{artical_date} {__url_habr + artical.h2.a.get('href')} {artical.h2.text}")
+    print(f"{artical_date} - {__url_habr + artical.h2.a.get('href')} - {artical.h2.text}")
 
 
 if __name__ == '__main__':
